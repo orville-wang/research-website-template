@@ -8,8 +8,8 @@ export interface TimelineItem {
 
 export const timelineData: TimelineItem[] = [
   {
-    date: "2026.01 — (incoming)",
-    title: "Incoming Ph.D. Student",
+    date: "2026.01 — Present",
+    title: "Ph.D. Student",
     organization: "Hong Kong University of Science and Technology",
     type: "education",
     logoUrl: "/logos/HKUST.png",

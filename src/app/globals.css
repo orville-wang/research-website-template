@@ -48,3 +48,92 @@ body {
 .wave:hover {
   animation: wave-animation 0.6s ease-in-out;
 }
+
+.badge-shine {
+  position: relative;
+  border: 1px solid var(--badge-border);
+  box-shadow:
+    0 0 0 1px var(--badge-ring-soft),
+    0 0 8px var(--badge-glow-soft);
+  animation: badge-border-pulse 2.4s ease-in-out infinite;
+}
+
+.badge-shine::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    transparent 34%,
+    rgba(255, 255, 255, 0.72) 48%,
+    transparent 62%,
+    transparent 100%
+  );
+  opacity: 0;
+  animation: badge-sweep 3.2s ease-in-out infinite;
+}
+
+.badge-shine-amber {
+  --badge-border: #f59e0b;
+  --badge-border-bright: #facc15;
+  --badge-ring-soft: rgba(245, 158, 11, 0.16);
+  --badge-ring-strong: rgba(250, 204, 21, 0.35);
+  --badge-glow-soft: rgba(245, 158, 11, 0.16);
+  --badge-glow-strong: rgba(250, 204, 21, 0.32);
+}
+
+.badge-shine-emerald {
+  --badge-border: #34d399;
+  --badge-border-bright: #6ee7b7;
+  --badge-ring-soft: rgba(52, 211, 153, 0.16);
+  --badge-ring-strong: rgba(110, 231, 183, 0.36);
+  --badge-glow-soft: rgba(52, 211, 153, 0.16);
+  --badge-glow-strong: rgba(110, 231, 183, 0.32);
+}
+
+.badge-shine-rose {
+  --badge-border: #fb7185;
+  --badge-border-bright: #fda4af;
+  --badge-ring-soft: rgba(251, 113, 133, 0.16);
+  --badge-ring-strong: rgba(253, 164, 175, 0.36);
+  --badge-glow-soft: rgba(251, 113, 133, 0.16);
+  --badge-glow-strong: rgba(253, 164, 175, 0.32);
+}
+
+@keyframes badge-border-pulse {
+  0%,
+  100% {
+    border-color: var(--badge-border);
+    box-shadow:
+      0 0 0 1px var(--badge-ring-soft),
+      0 0 7px var(--badge-glow-soft);
+  }
+  50% {
+    border-color: var(--badge-border-bright);
+    box-shadow:
+      0 0 0 1px var(--badge-ring-strong),
+      0 0 12px var(--badge-glow-strong);
+  }
+}
+
+@keyframes badge-sweep {
+  0%,
+  42% {
+    opacity: 0;
+    transform: translateX(-45%);
+  }
+  52% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 0;
+    transform: translateX(45%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(45%);
+  }
+}

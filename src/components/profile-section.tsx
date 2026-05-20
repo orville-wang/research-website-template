@@ -99,9 +99,23 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Mail size={14} />
+            <Mail size={14} className="flex-shrink-0" />
             {aboutMe.email}
           </a>
+          {aboutMe.secondaryEmail && (
+            <>
+              <br />
+              <a
+                href={`mailto:${aboutMe.secondaryEmail}`}
+                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Mail size={14} className="flex-shrink-0" />
+                <span className="break-all">{aboutMe.secondaryEmail}</span>
+              </a>
+            </>
+          )}
           {aboutMe.googleScholarUrl && (
             <>
               <br />

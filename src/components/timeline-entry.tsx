@@ -35,10 +35,16 @@ export function TimelineEntry({ item, isLast }: { item: TimelineItem; isLast: bo
       </div>
 
       {/* Content */}
-      <div className="flex-1 pt-2">
-        <div className="text-xs text-zinc-500 mb-1">{item.date}</div>
-        <h3 className="text-base font-serif mb-1">{item.title}</h3>
-        <p className="text-sm text-zinc-600">{item.organization}</p>
+      <div className="grid flex-1 grid-cols-1 gap-1 pt-2 sm:grid-cols-[7.5rem_1fr] sm:gap-4">
+        <div className="text-xs text-zinc-500 whitespace-nowrap">
+          {item.date}
+        </div>
+        <div className="min-w-0">
+          <h3 className="text-base font-serif mb-1">{item.title}</h3>
+          <p className="text-sm text-zinc-600 leading-relaxed">
+            {item.organization}
+          </p>
+        </div>
       </div>
 
       <style jsx>{`

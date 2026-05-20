@@ -6,7 +6,7 @@ export interface CustomMetadata {
 
 export const customMetadata: CustomMetadata = {
   title: "Zhiwen Chen - Research in Autonomous Driving & Reinforcement Learning",
-  description: "Zhiwen Chen is a Research Assistant at SJTU and incoming Ph.D. student at HKUST. His research focuses on autonomous driving, reinforcement learning, and large vision-language models for intelligent decision-making systems.",
+  description: "Zhiwen Chen is a Ph.D. student at HKUST and Research Assistant at SJTU. His research focuses on autonomous driving, reinforcement learning, and large vision-language models for intelligent decision-making systems.",
   keywords: [
     "Zhiwen Chen",
     "Autonomous Driving",
