@@ -31,7 +31,7 @@ export default function Home() {
           </div>
 
           {/* Right Column - Scrolling Content */}
-          <div className="col-span-12 md:col-span-7 md:col-start-6 space-y-24">
+          <div className="col-span-12 md:col-span-7 md:col-start-6 space-y-20">
             {/* About section is typically first */}
             {aboutMe.description && (
               <section>
@@ -41,9 +41,6 @@ export default function Home() {
                 />
               </section>
             )}
-
-            {/* Driving car animation */}
-            <DrivingCar />
 
             {/* Map through sectionOrder to render sections in correct order */}
             {sectionOrder.map((sectionName) => {
@@ -70,9 +67,10 @@ export default function Home() {
                   return (
                     timelineData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-zinc-700 mb-12 tracking-wide uppercase">
+                        <h2 className="font-serif text-zinc-700 mb-6 tracking-wide uppercase">
                           Timeline
                         </h2>
+                        <DrivingCar className="-mt-2 mb-8 max-h-32 opacity-95" />
                         <div>
                           {timelineData.map((item, index) => (
                             <TimelineEntry
