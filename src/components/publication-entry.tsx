@@ -5,6 +5,20 @@ import { useState } from "react";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { Publication } from "@/data/publication";
 
+const institutionLogos: Record<string, string> = {
+  "DiDi Chuxing": "/logos/didi.png",
+  "Hello Inc.": "/logos/halo.png",
+  SJTU: "/logos/sjtu.png",
+  "SenseTime Research": "/logos/sensetime.png",
+  "Shanghai Jiao Tong University": "/logos/sjtu.png",
+  "The Hong Kong Polytechnic University": "/logos/Poly.png",
+  "The Hong Kong University of Science and Technology (Guangzhou)":
+    "/logos/HKUST.png",
+  "Texas A&M University": "/logos/Texas%20A%26M%20University.webp",
+  "Tongji University": "/logos/tongji.png",
+  "University of Michigan": "/logos/University%20of%20Michigan.webp",
+};
+
 export function PublicationEntry({
   publication,
 }: {
@@ -107,9 +121,22 @@ export function PublicationEntry({
             {publication.institutions.map((institution, index) => (
               <span
                 key={index}
-                className="px-3 py-1.5 text-xs font-medium bg-gradient-to-r from-orange-50 to-amber-50 text-orange-700 rounded-full border border-orange-200 shadow-sm"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-gradient-to-r from-orange-50 to-amber-50 text-orange-700 rounded-full border border-orange-200 shadow-sm"
               >
-                🏢 {institution}
+                {institutionLogos[institution] ? (
+                  <Image
+                    src={institutionLogos[institution]}
+                    alt=""
+                    width={16}
+                    height={16}
+                    className="h-4 w-4 flex-shrink-0 rounded-full object-contain"
+                  />
+                ) : (
+                  <span className="h-4 w-4 flex-shrink-0 rounded-full bg-orange-200 text-[10px] leading-4 text-orange-700">
+                    {institution.charAt(0)}
+                  </span>
+                )}
+                <span>{institution}</span>
               </span>
             ))}
           </div>
