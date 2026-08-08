@@ -1,10 +1,10 @@
 export function DrivingCar({ className = "" }: { className?: string }) {
   return (
-    <div className={`w-full overflow-hidden ${className}`}>
+    <div className={`collaboration-drive-stage w-full overflow-hidden ${className}`}>
       <img
         src="/auto_car.svg"
         alt="Autonomous car"
-        className="h-auto w-full"
+        className="collaboration-car-scene h-auto w-full"
       />
     </div>
   );

@@ -103,28 +103,14 @@ body {
   --badge-glow-strong: rgba(253, 164, 175, 0.32);
 }
 
-.collaboration-highlight {
-  background: linear-gradient(
-    110deg,
-    #fef3c7 0%,
-    #fde68a 38%,
-    #fef9c3 50%,
-    #fde68a 62%,
-    #fef3c7 100%
-  );
-  background-size: 220% 100%;
-  animation: collaboration-highlight-shift 4.5s ease-in-out infinite;
-  box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.16);
+.collaboration-drive-stage {
+  position: relative;
+  min-height: 180px;
+  padding-top: 28px;
 }
 
-@keyframes collaboration-highlight-shift {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+.collaboration-car-scene {
+  display: block;
 }
 
 @keyframes badge-border-pulse {
