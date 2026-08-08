@@ -76,8 +76,8 @@ export default function Home() {
                   return (
                     timelineData.length > 0 && (
                       <section key={sectionName}>
+                        <DrivingCar className="mb-8 opacity-95" />
                         <SectionHeading icon="🗓️">Timeline</SectionHeading>
-                        <DrivingCar className="-mt-8 mb-8 opacity-95" />
                         <div>
                           {timelineData.map((item, index) => (
                             <TimelineEntry

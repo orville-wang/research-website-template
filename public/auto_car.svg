@@ -23,7 +23,7 @@
     .exhaust-message {
       fill: #27272A;
       font-family: Georgia, serif;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
     }
 
