@@ -76,12 +76,12 @@ export default function Home() {
                   return (
                     timelineData.length > 0 && (
                       <section key={sectionName}>
-                        <SectionHeading icon="🗓️">Timeline</SectionHeading>
-                        <p className="font-serif text-sm leading-relaxed text-zinc-700 -mt-8 mb-8">
+                        <p className="font-serif text-sm leading-relaxed text-zinc-800 bg-yellow-100 border border-yellow-200 rounded-md px-4 py-3 mb-6">
                           If you are interested in my research or would like to
                           collaborate, feel free to reach out via email. I’m
                           always happy to chat!
                         </p>
+                        <SectionHeading icon="🗓️">Timeline</SectionHeading>
                         <DrivingCar className="-mt-2 mb-8 max-h-32 opacity-95" />
                         <div>
                           {timelineData.map((item, index) => (

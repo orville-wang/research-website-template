@@ -28,6 +28,8 @@ export const aboutMe: AboutMe = {
   email: "zhiwen_chen725@163.com",
   secondaryEmail: "zchen897@connect.hkust-gz.edu.cn",
   imageUrl: "/photo.png",
+  googleScholarUrl:
+    "https://scholar.google.com.hk/citations?user=WZJU1kUAAAAJ&hl=zh-CN",
   institutionUrl: "https://www.tongji.edu.cn",
   // altName: "陈志文",
   // secretDescription: "",
