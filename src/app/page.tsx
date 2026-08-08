@@ -15,6 +15,17 @@ import { timelineData } from "@/data/timeline";
 import { sectionOrder, Section } from "@/data/section-order";
 import { DrivingCar } from "@/components/driving-car";
 
+function SectionHeading({ icon, children }: { icon: string; children: string }) {
+  return (
+    <h2 className="font-serif text-lg font-bold text-zinc-800 mb-12 tracking-wide uppercase">
+      <span className="mr-2" aria-hidden="true">
+        {icon}
+      </span>
+      {children}
+    </h2>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#FFFCF8]">
@@ -50,9 +61,7 @@ export default function Home() {
                   return (
                     newsData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
-                          News
-                        </h2>
+                        <SectionHeading icon="📰">News</SectionHeading>
                         <div className="space-y-12">
                           {newsData.map((news, index) => (
                             <div key={index}>
@@ -67,9 +76,12 @@ export default function Home() {
                   return (
                     timelineData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-zinc-700 mb-6 tracking-wide uppercase">
-                          Timeline
-                        </h2>
+                        <SectionHeading icon="🗓️">Timeline</SectionHeading>
+                        <p className="font-serif text-sm leading-relaxed text-zinc-700 -mt-8 mb-8">
+                          If you are interested in my research or would like to
+                          collaborate, feel free to reach out via email. I’m
+                          always happy to chat!
+                        </p>
                         <DrivingCar className="-mt-2 mb-8 max-h-32 opacity-95" />
                         <div>
                           {timelineData.map((item, index) => (
@@ -87,9 +99,7 @@ export default function Home() {
                   return (
                     educationData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-zinc-700 mb-12 tracking-wide uppercase">
-                          Education
-                        </h2>
+                        <SectionHeading icon="🎓">Education</SectionHeading>
                         <div className="space-y-12">
                           {educationData.map((education, index) => (
                             <EducationEntry key={index} education={education} />
@@ -102,9 +112,7 @@ export default function Home() {
                   return (
                     publicationData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
-                          Publications
-                        </h2>
+                        <SectionHeading icon="📚">Publications</SectionHeading>
                         <div className="space-y-12">
                           {publicationData.map((publication, index) => (
                             <div key={index}>
@@ -122,9 +130,7 @@ export default function Home() {
                   return (
                     experienceData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
-                          Experience
-                        </h2>
+                        <SectionHeading icon="💼">Experience</SectionHeading>
                         <div className="space-y-12">
                           {experienceData.map((experience, index) => (
                             <ExperienceEntry
@@ -140,9 +146,7 @@ export default function Home() {
                   return (
                     portfolioData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
-                          Portfolio
-                        </h2>
+                        <SectionHeading icon="🧩">Portfolio</SectionHeading>
                         <div className="space-y-12">
                           {portfolioData.map((portfolio, index) => (
                             <PortfolioEntry key={index} portfolio={portfolio} />
