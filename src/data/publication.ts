@@ -48,17 +48,6 @@ export const publicationData: Publication[] = [
   {
     year: "",
     conference: "",
-    title: "FlexPlanner: Learning Adaptive Driving Planner with Temporal Reward Decomposition",
-    status: "Under Review",
-    institutions: [
-      "The Hong Kong University of Science and Technology (Guangzhou)",
-      "Shanghai Jiao Tong University",
-      "Hello Inc.",
-    ],
-  },
-  {
-    year: "",
-    conference: "",
     title: "RegAD: Rethinking Regressive versus Generative Planning in End-to-End Autonomous Driving",
     status: "Under Review",
   },
